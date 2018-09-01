@@ -8,8 +8,10 @@ Download the datasets in the `./dist` dir of this repository.
 
 ## Supported programming languages
 
-- Swift
-  - Data structure: Array, Dictionary
+### Swift
+
+- Array
+- Dictionary
 
 ## Resources
 
