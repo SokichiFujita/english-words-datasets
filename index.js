@@ -25,7 +25,7 @@ const createSwiftArrayFile = async dir => {
       const readFile = `./${dir}/${file}`;
       const fileContent = await fs.readFile(readFile, "utf8");
 
-      const header = "let array = [\n";
+      const header = "let english_array = [\n";
       const words = fileContent
         .split("\n")
         .filter(x => x !== "")
@@ -35,7 +35,7 @@ const createSwiftArrayFile = async dir => {
       const footer = "\n]";
       const str = header + words.substring(0, words.length - 2) + footer;
 
-      const writeFilename = `${path.basename(file, ".txt")}-swift-array.txt`;
+      const writeFilename = `array-${path.basename(file, ".txt")}.swift`;
       const writeFile = `./dist/${dir}/swift/${writeFilename}`;
       await fs.writeFile(writeFile, str, "utf8");
       return str;
@@ -56,7 +56,7 @@ const createSwiftDictFile = async dir => {
       const readFile = `./${dir}/${file}`;
       const fileContent = await fs.readFile(readFile, "utf8");
 
-      const header = "let dict = [\n";
+      const header = "let english_dict = [\n";
       const words = fileContent
         .split("\n")
         .filter(x => x !== "")
@@ -68,7 +68,7 @@ const createSwiftDictFile = async dir => {
 
       const outputDir = `./dist/${dir}/swift/`;
       await fse.mkdirp(outputDir);
-      const writeFilename = `${path.basename(file, ".txt")}-swift-dict.txt`;
+      const writeFilename = `dict-${path.basename(file, ".txt")}.swift`;
       const writeFile = `./dist/${dir}/swift/${writeFilename}`;
       await fs.writeFile(writeFile, str, "utf8");
       return str;
