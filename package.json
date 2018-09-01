@@ -1,0 +1,19 @@
+{
+  "name": "english-words-datasets",
+  "version": "1.0.0",
+  "description": "English words datasets for a lot of programing languages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SokichiFujita/english-words-datasets.git"
+  },
+  "author": "Sokichi Fujita <dimension.sf@gmail.com> (https://github.com/SokichiFujita)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SokichiFujita/english-words-datasets/issues"
+  },
+  "homepage": "https://github.com/SokichiFujita/english-words-datasets#readme"
+}
